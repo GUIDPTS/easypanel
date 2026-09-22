@@ -143,5 +143,3 @@ class CdnControl extends Control
 		return count($parts) === 1 || ($parts[1] !== '' && ctype_digit($parts[1]) && intval($parts[1]) <= 32);
 	}
 }
-
-?>

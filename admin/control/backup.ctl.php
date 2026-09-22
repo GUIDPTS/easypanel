@@ -225,5 +225,3 @@ class BackupControl extends control
 		exit('falied');
 	}
 }
-
-?>

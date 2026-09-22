@@ -65,5 +65,3 @@ class SettingDAO extends DAO
 		return $arr;
 	}
 }
-
-?>

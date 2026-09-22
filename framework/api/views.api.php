@@ -20,5 +20,3 @@ class ViewsAPI extends API
 		return false;
 	}
 }
-
-?>

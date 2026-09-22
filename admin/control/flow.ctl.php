@@ -52,5 +52,3 @@ class FlowControl extends control
 		return $this->_tpl->display('flow/sort.html');
 	}
 }
-
-?>

@@ -122,5 +122,3 @@ class DnsdomainControl extends Control
 		return $this->_tpl->fetch('dnsdomain/pagelist.html');
 	}
 }
-
-?>

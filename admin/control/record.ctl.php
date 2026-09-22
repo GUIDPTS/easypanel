@@ -97,5 +97,3 @@ class RecordControl extends Control
 		return $this->_tpl->fetch('record/pagelist.html');
 	}
 }
-
-?>

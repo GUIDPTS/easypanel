@@ -121,6 +121,3 @@ class Control
 		$this->_tpl->display('error.html');
 	}
 }
-
-
-?>

@@ -25,5 +25,3 @@ class FilterDAO extends DAO
 		return $this->select(null);
 	}
 }
-
-?>

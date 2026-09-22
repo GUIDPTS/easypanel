@@ -172,5 +172,3 @@ class CdnSlaveAPI extends API
 		return '@' . $nodename . '_' . $name . '.key';
 	}
 }
-
-?>

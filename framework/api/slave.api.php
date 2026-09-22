@@ -17,5 +17,3 @@ class SlaveAPI extends API
 		return true;
 	}
 }
-
-?>

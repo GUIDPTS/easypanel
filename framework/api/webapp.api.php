@@ -1,6 +1,8 @@
 <?php
 class WebappAPI extends API
 {
+	private $err_msg;
+
 	public function getDomainInfo($vhost)
 	{
 		$node = apicall('vhost', 'getNode', array($vhost));
@@ -112,5 +114,3 @@ class WebappAPI extends API
 		return $result;
 	}
 }
-
-?>

@@ -316,5 +316,3 @@ class SessionControl extends Control
 		trigger_error('cann\'t write all_in_one.xml');
 	}
 }
-
-?>

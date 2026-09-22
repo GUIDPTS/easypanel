@@ -26,5 +26,3 @@ class UserAPI extends API
 		return $ret;
 	}
 }
-
-?>

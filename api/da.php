@@ -27,5 +27,3 @@ include SYS_ROOT . '/runtime.php';
 $tpl = TPL::singleton();
 $tpl->assign('title', getTitle());
 startFramework();
-
-?>

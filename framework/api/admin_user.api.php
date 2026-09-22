@@ -26,5 +26,3 @@ class AdminUserAPI extends API
 		return $ret;
 	}
 }
-
-?>

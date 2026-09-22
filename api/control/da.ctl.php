@@ -222,5 +222,3 @@ class DaControl extends Control
 		exit('not support');
 	}
 }
-
-?>

@@ -307,5 +307,3 @@ class WebappControl extends Control
 		return $this->index();
 	}
 }
-
-?>

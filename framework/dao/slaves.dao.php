@@ -63,5 +63,3 @@ class SlavesDAO extends DAO
 		return $this->select($fields, $where, $type);
 	}
 }
-
-?>

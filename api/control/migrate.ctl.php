@@ -65,5 +65,3 @@ class MigrateControl extends control
 		exit();
 	}
 }
-
-?>

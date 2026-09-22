@@ -28,6 +28,3 @@ class API
 		return $ret;
 	}
 }
-
-
-?>

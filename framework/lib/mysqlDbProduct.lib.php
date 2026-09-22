@@ -155,5 +155,3 @@ class MysqlDbProduct extends DbProduct
 		return '`' . str_replace('`', '``', ep_str($name)) . '`';
 	}
 }
-
-?>

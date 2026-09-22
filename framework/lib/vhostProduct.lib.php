@@ -9,11 +9,6 @@ class VhostProduct extends Product
 	{
 	}
 
-	public function getEntKey()
-	{
-		return 'rZnBhc2prZHBmb2tzYXBkZmtwYXNkb2tmcGFza2RmcG9rYXNkZnNk';
-	}
-
 	/**
 	 * 得到产品信息
 	 * @param $product_id 产品ID
@@ -229,14 +224,6 @@ class VhostProduct extends Product
 
 	public function copyIndexForUser($name)
 	{
-		if (!isEnt()) {
-			return false;
-		}
-
-		if (!apicall('access', 'checkEntAccess', array())) {
-			return false;
-		}
-
 		$docroot = $this->getDocRoot($name);
 		$file = dirname(__FILE__) . '/../../../../etc/index.html';
 		$filename = $docroot . '/index.html';
@@ -320,5 +307,3 @@ class VhostProduct extends Product
 		return $ret;
 	}
 }
-
-?>

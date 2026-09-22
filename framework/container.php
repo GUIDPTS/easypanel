@@ -8,7 +8,7 @@ class Container
 	{
 	}
 
-	public function getInstance()
+	public static function getInstance()
 	{
 		if (self::$container === NULL) {
 			self::$container = new Container();
@@ -65,6 +65,3 @@ class Container
 		return $object;
 	}
 }
-
-
-?>

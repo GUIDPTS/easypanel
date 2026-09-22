@@ -155,5 +155,3 @@ class SlaveControl extends Control
 		exit(json_encode($json));
 	}
 }
-
-?>

@@ -37,5 +37,3 @@ class CachecleanControl extends Control
 		exit('成功:清除缓存数 ' . $count);
 	}
 }
-
-?>

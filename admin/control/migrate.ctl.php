@@ -485,5 +485,3 @@ class MigrateControl extends Control
 		$this->migrate_result(500, '迁移失败');
 	}
 }
-
-?>

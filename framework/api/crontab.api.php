@@ -27,5 +27,3 @@ class CrontabAPI extends API
 		return $whm->call($whmCall, 10);
 	}
 }
-
-?>

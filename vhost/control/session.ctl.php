@@ -186,5 +186,3 @@ class SessionControl extends Control
 		exit('修改数据库密码失败');
 	}
 }
-
-?>

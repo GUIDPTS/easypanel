@@ -85,5 +85,3 @@ class SecurityControl extends Control
 		return true;
 	}
 }
-
-?>

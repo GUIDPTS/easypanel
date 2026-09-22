@@ -154,6 +154,3 @@ class Dnsdun
 		return false;
 	}
 }
-
-
-?>

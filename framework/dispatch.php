@@ -137,6 +137,3 @@ function dispatch($control, $action)
 
 	return $result;
 }
-
-
-?>

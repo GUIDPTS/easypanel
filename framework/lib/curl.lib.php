@@ -65,6 +65,3 @@ class Curl
 		return json_decode($this->result, true);
 	}
 }
-
-
-?>

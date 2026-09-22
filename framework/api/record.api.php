@@ -136,5 +136,3 @@ class RecordAPI extends API
 		return $dnsdun->test();
 	}
 }
-
-?>

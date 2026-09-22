@@ -68,5 +68,3 @@ class HttpauthAPI extends API
 		return $GLOBALS['safe_dir'] . 'httpauth/' . ep_safe_name($vhost) . '.txt';
 	}
 }
-
-?>

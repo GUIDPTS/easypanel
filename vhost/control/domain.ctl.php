@@ -403,5 +403,3 @@ class DomainControl extends Control
 	}
 
 }
-
-?>

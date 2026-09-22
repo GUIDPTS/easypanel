@@ -141,5 +141,3 @@ class ServersControl extends Control
 		exit('成功');
 	}
 }
-
-?>

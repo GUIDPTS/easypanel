@@ -79,6 +79,3 @@ class Selector
 		return empty($this->rev) && empty($this->wev);
 	}
 }
-
-
-?>

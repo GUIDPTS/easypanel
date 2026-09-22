@@ -247,5 +247,3 @@ class CronAPI extends API
 		unlink('/etc/cron.d/ep_sync_flow');
 	}
 }
-
-?>

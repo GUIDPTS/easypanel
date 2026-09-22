@@ -162,5 +162,3 @@ class RewritesControl extends Control
 	}
 
 }
-
-?>

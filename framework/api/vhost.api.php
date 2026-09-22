@@ -588,14 +588,6 @@ class VhostAPI extends API
 
 	public function copyIndexForUser($name, $dir)
 	{
-		/*if (!isEnt()) {
-			return false;
-		}
-
-		if (!apicall('access', 'checkEntAccess', array())) {
-			return false;
-		}*/
-
 		$product = apicall('product', 'newProduct', array('vhost'));
 		$docroot = $product->getDocRoot($name);
 		$file = $GLOBALS['safe_dir'] . '/index.html';
@@ -613,5 +605,3 @@ class VhostAPI extends API
 		return @copy($file, $filename);
 	}
 }
-
-?>

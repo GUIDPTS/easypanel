@@ -95,5 +95,3 @@ class MimeControl extends Control
 		exit('更新失败');
 	}
 }
-
-?>

@@ -38,6 +38,3 @@ abstract class DbProduct
 
 	abstract public function used($uid);
 }
-
-
-?>

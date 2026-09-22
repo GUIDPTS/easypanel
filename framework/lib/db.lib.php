@@ -138,5 +138,3 @@ define('DB_DISCONNECT', 0);
 define('DB_CONNECT', 1);
 define('DB_ERROR', 2);
 define('DBPRE', '');
-
-?>

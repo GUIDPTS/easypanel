@@ -59,5 +59,3 @@ class InstallAPI extends API
 		return trim($line[0]);
 	}
 }
-
-?>

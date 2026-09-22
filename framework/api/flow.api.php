@@ -36,5 +36,3 @@ class FlowAPI extends API
 		return $this->getMonthFlow($name, date('Ym'));
 	}
 }
-
-?>

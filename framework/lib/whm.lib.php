@@ -358,5 +358,3 @@ class WhmValue extends ArrayObject
 		$this->name = $name;
 	}
 }
-
-?>

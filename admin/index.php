@@ -9,5 +9,3 @@ $tpl = TPL::singleton();
 $tpl->assign('title', getTitle());
 loadSetting($tpl);
 startFramework();
-
-?>

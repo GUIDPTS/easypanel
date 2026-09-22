@@ -134,5 +134,3 @@ class AntisqlControl extends Control
 		return $this->_tpl->fetch('msg.html');
 	}
 }
-
-?>

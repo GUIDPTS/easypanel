@@ -63,5 +63,3 @@ class TPL
 		return self::$instance;
 	}
 }
-
-?>

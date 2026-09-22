@@ -39,5 +39,3 @@ class HttpauthDAO extends DAO
 		return md5($src) . $salt;
 	}
 }
-
-?>

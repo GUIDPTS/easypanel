@@ -17,5 +17,3 @@ class FileaccessAPI extends API
 	{
 	}
 }
-
-?>

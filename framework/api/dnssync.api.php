@@ -269,5 +269,3 @@ class DnssyncAPI extends API
 		return $result;
 	}
 }
-
-?>

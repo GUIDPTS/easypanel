@@ -202,5 +202,3 @@ class ManynodeControl extends control
 		return $this->_tpl->display('manynode/pagelist.html');
 	}
 }
-
-?>

@@ -195,5 +195,3 @@ class ShellControl extends Control
 		exit();
 	}
 }
-
-?>

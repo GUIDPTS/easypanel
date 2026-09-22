@@ -43,5 +43,3 @@ class CapabilityControl extends Control
 		exit(json_encode($ret));
 	}
 }
-
-?>

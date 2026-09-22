@@ -1092,5 +1092,3 @@ class RestoreAPI extends API
 		exec($cmd);
 	}
 }
-
-?>

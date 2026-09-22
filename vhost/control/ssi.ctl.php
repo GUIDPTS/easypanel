@@ -38,5 +38,3 @@ class SsiControl extends Control
 		return $this->_tpl->fetch('ssi.html');
 	}
 }
-
-?>

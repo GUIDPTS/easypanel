@@ -11,5 +11,3 @@ class DnsControl extends Control
 		}
 	}
 }
-
-?>

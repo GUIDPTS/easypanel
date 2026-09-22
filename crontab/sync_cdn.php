@@ -27,5 +27,3 @@ while ($i < $_SERVER['argc']) {
 }
 
 apicall('vhost', 'noticeChange', array('localhost', false));
-
-?>

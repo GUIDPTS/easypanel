@@ -472,5 +472,3 @@ class CdnPrimaryAPI extends API
 	));
 	}
 }
-
-?>

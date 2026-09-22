@@ -76,5 +76,3 @@ class TplenvAPI extends API
 		return ENV_CHECK_FAILED;
 	}
 }
-
-?>

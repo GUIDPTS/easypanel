@@ -125,5 +125,3 @@ class MigrateAPI extends API
 		echo $msg;
 	}
 }
-
-?>

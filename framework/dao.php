@@ -454,5 +454,3 @@ define('FIELD_TYPE_INT', 1);
 define('FIELD_TYPE_MD5', 2);
 define('FIELD_TYPE_DATETIME', 4);
 define('FIELD_TYPE_AUTO', 1 << 28);
-
-?>

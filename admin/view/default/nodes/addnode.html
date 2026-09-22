@@ -23,23 +23,6 @@ $(document).ready(function(){
 		}
 	}
 });
-function checkEnt()
-{
-	$.ajax({
-		url:'?c=nodes&a=checkEnt',
-		dataType:'json',
-		success:function(a) {
-			if (a.code != 1) {
-				$("#check_ent_td").html("<img src='/style/check_error.gif'>"+a.message);
-				return ;
-			}
-			$("#check_ent_td").html("<b style='color:green'>过期时间:</b>"+a.expire+" <img src='/style/check_right.gif'>");
-			if (a.warning) {
-				alert(a.warning);
-			}
-		}
-	});
-}
 function showEntMem()
 {
 	var str = "请将得到的授权信息放在kangle安装目录下的nodewww/webftp/config.php文件中\n\n";
@@ -123,10 +106,6 @@ function testDnsdun()
 				</td></tr>
 			<tr><td>面板通信安全码:</td>
 				<td><input name='skey'  value="{{$setting.skey}}"/><input type="button" onclick='rand_skey(this.form.skey)' value='随机'>	</td></tr>
-			<!--  
-			<tr><td title="">检查授权:</td>
-				<td id="check_ent_td"><input type="button" onclick='showEntMem()' value='功能说明'><input type="button" onclick='checkEnt()' value='检测'><b style='color:red'>&nbsp;<a href="http://vl.kanglesoft.com/user/" target=_blank>购买授权</a></b></td></tr>
-			-->
 			<tr><td>域名绑定设置:</td>
 				<td>
 				赠送域名:<input name='vhost_domain' size=32  id="vhost_domain" value="{{$setting.vhost_domain}}" title='用于开通空间后，自动给空间绑定一个二级域名'/>
@@ -165,7 +144,7 @@ function testDnsdun()
 					</select>  &nbsp;在线文件管理器中文文件名默认编码</td></tr>
 			<tr><td>FTP相关设置:</td>
 				<td>ftp端口<input name='ftp_port' size=5  value="{{if $setting.ftp_port}}{{$setting.ftp_port}}{{else}}21{{/if}}"/>
-				pasv端口范围(最小端口:最大端口)<input name='ftp_pasv_port' value="{{$setting.ftp_pasv_port}}" placeholder="默认为30000:50000"/></td></tr>
+				pasv端口范围(最小端口:最大端口)<input name='ftp_pasv_port' value="{{$setting.ftp_pasv_port}}" placeholder="默认为39000:40000"/></td></tr>
 			<tr><td>面板title:</td>
 				<td><input name='title'  size=54 value="{{$setting.title}}"/></td></tr>
 			<tr><td>面板foot代码:</td>

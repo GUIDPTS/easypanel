@@ -38,5 +38,3 @@ class CheckparamAPI extends API
 		return $a;
 	}
 }
-
-?>

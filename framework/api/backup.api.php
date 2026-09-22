@@ -1224,5 +1224,3 @@ class BackupAPI extends API
 		}
 	}
 }
-
-?>

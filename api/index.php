@@ -101,5 +101,3 @@ if (!verificationskey()) {
 $tpl = TPL::singleton();
 $tpl->assign('title', getTitle());
 startFramework();
-
-?>

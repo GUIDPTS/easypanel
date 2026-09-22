@@ -26,5 +26,3 @@ class RestoreControl extends Control
 		return $this->display('restore/index.html');
 	}
 }
-
-?>

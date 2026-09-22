@@ -298,5 +298,3 @@ class VhostinfoDAO extends DAO
 		return $this->update($arr, $wherestr);
 	}
 }
-
-?>

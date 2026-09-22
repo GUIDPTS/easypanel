@@ -6,5 +6,3 @@ if (file_exists('config.php')) {
 }
 
 header('Location: /admin/?c=session&a=loginForm');
-
-?>

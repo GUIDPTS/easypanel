@@ -57,5 +57,3 @@ class MoneyAPI extends API
 		return $default_db->commit();
 	}
 }
-
-?>

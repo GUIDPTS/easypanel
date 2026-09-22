@@ -243,6 +243,3 @@ class Access
 		return $this->whm->call($whmCall);
 	}
 }
-
-
-?>

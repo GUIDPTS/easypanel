@@ -67,5 +67,3 @@ class TestControl extends Control
 		}
 	}
 }
-
-?>

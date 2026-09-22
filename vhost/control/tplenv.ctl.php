@@ -41,5 +41,3 @@ class TplenvControl extends Control
 		return $this->index();
 	}
 }
-
-?>

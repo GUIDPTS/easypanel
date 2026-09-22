@@ -162,5 +162,3 @@ class RecordsDAO extends DAO
 		return $this->selectPage($fields, $where, $order_field, $desc, $page, $page_count, $count);
 	}
 }
-
-?>

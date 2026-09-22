@@ -186,5 +186,3 @@ class SpeedControl extends Control
 		}
 	}
 }
-
-?>

@@ -27,5 +27,3 @@ if (!preg_match('/^[A-Za-z_][A-Za-z0-9_]*$/', $action)) {
 }
 
 @apicall('shell', $action, array($argv));
-
-?>

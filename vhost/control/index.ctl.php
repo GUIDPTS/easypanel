@@ -292,5 +292,3 @@ class IndexControl extends Control
 		exit('刷新失败');
 	}
 }
-
-?>

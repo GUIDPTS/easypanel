@@ -160,5 +160,3 @@ class FuncControl extends control
 		exit(json_encode($json));
 	}
 }
-
-?>

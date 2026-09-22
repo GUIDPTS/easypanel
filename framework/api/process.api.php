@@ -111,5 +111,3 @@ class ProcessApi extends API
 			fclose($fp);
 	}
 }
-
-?>

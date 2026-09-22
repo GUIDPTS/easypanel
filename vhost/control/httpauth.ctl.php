@@ -38,5 +38,3 @@ class HttpauthControl extends Control
 		return $this->index();
 	}
 }
-
-?>

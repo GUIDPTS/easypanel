@@ -92,5 +92,3 @@ class ProductAPI extends API
 		return new $className();
 	}
 }
-
-?>

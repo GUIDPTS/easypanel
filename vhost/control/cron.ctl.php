@@ -28,5 +28,3 @@ class CronControl extends Control
 		return $this->index();
 	}
 }
-
-?>

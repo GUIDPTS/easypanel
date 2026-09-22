@@ -460,5 +460,3 @@ class WhmControl extends Control
 		exit();
 	}
 }
-
-?>

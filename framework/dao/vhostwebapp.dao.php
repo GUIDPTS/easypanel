@@ -56,5 +56,3 @@ class VhostwebappDAO extends DAO
 		return $this->update(array('status' => 1), $this->getFieldValue2('id', $id) . ' AND ' . $this->getFieldValue2('user', $user));
 	}
 }
-
-?>

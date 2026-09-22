@@ -40,5 +40,3 @@ class InfoControl extends Control
 		return $this->showErrorPage();
 	}
 }
-
-?>

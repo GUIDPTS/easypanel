@@ -249,5 +249,3 @@ class VhostControl extends Control
 		exit();
 	}
 }
-
-?>

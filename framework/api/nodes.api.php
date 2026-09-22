@@ -12,16 +12,6 @@ class NodesAPI extends API
 		parent::__destruct();
 	}
 
-	public function getFullKey()
-	{
-		$key = @apicall('utils', 'getEntKey', array());
-		$key .= @apicall('server', 'getEntKey', array());
-		$product = apicall('product', 'newProduct', array('vhost'));
-		$key .= $product->getEntKey();
-		$key .= 'a2w7ZmFzbGQnYXNka2Zwb2FrandlcGtqLTIzNGstMjM0LTIzLTQya';
-		return $key;
-	}
-
 	public function delMysqlTestDatabase($node)
 	{
 		$db = $this->makeDbProduct($node, 'mysql');
@@ -360,23 +350,26 @@ class NodesAPI extends API
 				$result = $whm->call($whmCall);
 			}
 			else {
-				$ftp_configs = '';
-				if ($setting['ftp_pasv_port']) {
-					$ftp_configs .= ' --passiveportrange ' . $setting['ftp_pasv_port'];
-				}
+				$conf_file = '/vhs/pure-ftpd/etc/pure-ftpd.conf';
+				$content = @file_get_contents($conf_file);
 
-				if ($setting['ftp_port']) {
-					$ftp_configs .= ' --bind *,' . $setting['ftp_port'];
-				}
+				if ($content !== false) {
+					if ($setting['ftp_pasv_port']) {
+						$range = trim(preg_replace('/\s+/', ' ', str_replace(':', ' ', $setting['ftp_pasv_port'])));
+						$content = $this->replacePureFtpdDirective($content, 'PassivePortRange', 'PassivePortRange             ' . $range);
+					}
 
-				$tpl->assign('ftp_configs', $ftp_configs);
-				$content = $tpl->fetch('pureftpd');
-				$fp = fopen('/etc/init.d/pureftpd', 'wb');
+					if ($setting['ftp_port']) {
+						$content = $this->replacePureFtpdDirective($content, 'Bind', 'Bind                         *,' . $setting['ftp_port']);
+					}
 
-				if ($fp) {
-					fwrite($fp, $content);
-					fclose($fp);
-					exec('/etc/init.d/pureftpd restart');
+					$fp = fopen($conf_file, 'wb');
+
+					if ($fp) {
+						fwrite($fp, $content);
+						fclose($fp);
+						exec('/etc/init.d/pureftpd restart');
+					}
 				}
 			}
 
@@ -406,6 +399,20 @@ class NodesAPI extends API
 		}
 
 		return true;
+	}
+
+	/**
+	 * 替换 pure-ftpd.conf 中的指令；不存在则追加到文件末尾
+	 */
+	private function replacePureFtpdDirective($content, $name, $line)
+	{
+		$pattern = '/^[ \t]*#?[ \t]*' . preg_quote($name, '/') . '[ \t]+.*$/mi';
+
+		if (preg_match($pattern, $content)) {
+			return preg_replace($pattern, $line, $content, 1);
+		}
+
+		return rtrim($content, "\r\n") . "\n" . $line . "\n";
 	}
 
 	/**
@@ -497,5 +504,3 @@ class NodesAPI extends API
 		return $nodes;
 	}
 }
-
-?>

@@ -82,5 +82,3 @@ class ViewsControl extends Control
 		return $this->_tpl->fetch('views/pagelist.html');
 	}
 }
-
-?>

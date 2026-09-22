@@ -208,11 +208,6 @@ function is_win()
 	return false;
 }
 
-function isEnt()
-{
-	return defined('EP_ENT_KEYS') && defined('EP_ENT_EXPIRE') && defined('EP_ENT_HOST');
-}
-
 function setLastError($errormsg)
 {
 	$GLOBALS['last_error'] = $errormsg;
@@ -449,7 +444,7 @@ function newapi($module)
 {
 	load_api($module);
 	$className = exportClass($module, 'API');
-	return Container::getinstance()->newObj($module, $className, true);
+	return Container::getInstance()->newObj($module, $className, true);
 }
 
 function daocall($module, $method, $args = null, $is_stat = true)
@@ -463,7 +458,7 @@ function newdao($module)
 {
 	load_dao($module);
 	$className = exportClass($module, 'DAO');
-	return Container::getinstance()->newObj($module, $className, true);
+	return Container::getInstance()->newObj($module, $className, true);
 }
 
 function exportClass($module, $lay)
@@ -488,7 +483,7 @@ function BaseCall($module, $className, $method, $args, $mul_mod = false, $is_sta
 		$__core_env['STRACE'][$module . '/' . $className . '/' . $method]['start'] = microtime_float();
 	}
 
-	$object = Container::getinstance()->newObj($module, $className, $mul_mod);
+	$object = Container::getInstance()->newObj($module, $className, $mul_mod);
 
 	if (method_exists($object, $method)) {
 		if ($args !== null && !is_array($args)) {
@@ -674,12 +669,10 @@ function is_ajax_request() {
 }
 
 error_reporting(E_ERROR | E_PARSE | E_COMPILE_ERROR);
-define('EASYPANEL_VERSION', '2.6.29');
+define('EASYPANEL_VERSION', '2.6.30');
 define('PHP_DEFAULT_VERSION', 'php56');
 define('IIS_DEFAULT_VERSION', 'v2.0.50727');
-define('ASDF_10_BVCX', 'ZHNhZmRqb2ozbzBqZmQwb2p1WzA0LTIzOT0yMy09aWUtZmpvc2lkZ');
 define('S_IFDIR', 16384);
-define('EP_KEY_FILE', $GLOBALS['safe_dir'] . '../ep_license.txt');
 @set_time_limit(0);
 
 if (!defined('SYS_ROOT')) {
@@ -702,5 +695,3 @@ __load_core('core:api');
 __load_core('core:tpl');
 __load_core('core:container');
 __load_core('core:dispatch');
-
-?>

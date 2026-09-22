@@ -17,30 +17,6 @@ class UtilsAPI extends API
 		}
 	}
 
-	public function getEntKey()
-	{
-		if (defined('ASDF_10_BVCX')) {
-			return ASDF_10_BVCX . 'nBvc2tkZnBhc2tkLWYwaTIzPS1pbzIzNC0yNGtzcC0wZGZrYXNwLT';
-		}
-
-		return '';
-	}
-
-	public function checkEnt($domain)
-	{
-		$ent_check_file = '';
-
-		if (!file_exists($ent_check_file)) {
-			return false;
-		}
-
-		$f = file_get_contents($ent_check_file);
-
-		if (!$f) {
-			return false;
-		}
-	}
-
 	public function checkInput($str)
 	{
 		$str = str_replace('"', '', $str);
@@ -427,5 +403,3 @@ class UtilsAPI extends API
 		fwrite($fp, $str);
 	}
 }
-
-?>

@@ -37,5 +37,3 @@ class WebalizerControl extends control
 		exit();
 	}
 }
-
-?>

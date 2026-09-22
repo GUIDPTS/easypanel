@@ -70,5 +70,3 @@ class ProductDAO extends DAO
 		return $this->connect();
 	}
 }
-
-?>

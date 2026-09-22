@@ -47,5 +47,3 @@ class CronDAO extends DAO
 		return $this->delData($this->getFieldValue2('vhost', $vhost));
 	}
 }
-
-?>

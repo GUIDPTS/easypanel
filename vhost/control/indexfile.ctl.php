@@ -64,5 +64,3 @@ class IndexfileControl extends Control
 		return $this->whm->call($whmCall);
 	}
 }
-
-?>

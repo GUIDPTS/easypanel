@@ -54,5 +54,3 @@ class ResponseControl extends control
 		exit('删除成功');
 	}
 }
-
-?>

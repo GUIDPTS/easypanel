@@ -415,5 +415,3 @@ class PhpsetControl extends Control
 	}
 
 }
-
-?>

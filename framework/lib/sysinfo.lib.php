@@ -140,6 +140,3 @@ function sys_info()
 
 	return false;
 }
-
-
-?>

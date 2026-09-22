@@ -394,5 +394,3 @@ class SslControl extends Control
 		return true;
 	}
 }
-
-?>

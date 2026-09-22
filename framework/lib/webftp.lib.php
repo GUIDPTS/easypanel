@@ -477,5 +477,3 @@ function my_copy_upfile($src, $dest)
 define('S_IFDIR', 16384);
 define('S_IWRITE', 512);
 define('FILE_ACCESS_TABLE', '!file_access');
-
-?>

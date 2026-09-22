@@ -89,5 +89,3 @@ class VhostinfoAPI extends API
 		return $this->set($arr, $wherearr);
 	}
 }
-
-?>

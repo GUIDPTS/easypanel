@@ -129,5 +129,3 @@ class BindControl extends Control
 		exit('成功');
 	}
 }
-
-?>

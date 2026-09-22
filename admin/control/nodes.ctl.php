@@ -29,33 +29,6 @@ class NodesControl extends Control
 		exit(json_encode($json));
 	}
 
-	public function checkEnt()
-	{
-		$json['code'] = 10;
-
-		if (!isEnt()) {
-			$json['message'] = '没有授权信息';
-			exit(json_encode($json));
-		}
-
-		$ret = apicall('access', 'checkEntAccess', array());
-
-		if (!$ret) {
-			$json['message'] = $GLOBALS['last_error'];
-			exit(json_encode($json));
-		}
-
-		$json['code'] = 1;
-		$json['expire'] = EP_ENT_EXPIRE;
-		$file = $GLOBALS['safe_dir'] . '/index.html';
-
-		if (!file_exists($file)) {
-			$json['warning'] = $file . '不存在';
-		}
-
-		exit(json_encode($json));
-	}
-
 	/**
 	 * 虚拟主机设置
 	 */
@@ -315,5 +288,3 @@ class NodesControl extends Control
 		exit();
 	}
 }
-
-?>

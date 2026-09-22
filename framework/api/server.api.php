@@ -26,11 +26,4 @@ class ServerAPI extends API
 
 		return false;
 	}
-
-	public function getEntKey()
-	{
-		return 'Bka2ZwYXNkamY7YXNkZjtsYXNkbDtmamFzZDtsZmFzZGZwJ2FzZGp';
-	}
 }
-
-?>

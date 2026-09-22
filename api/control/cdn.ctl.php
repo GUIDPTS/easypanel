@@ -461,5 +461,3 @@ class CdnControl extends Control
 		return rename($file . '.tmp', $file);
 	}
 }
-
-?>

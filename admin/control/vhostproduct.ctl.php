@@ -231,5 +231,3 @@ class VhostproductControl extends Control
 		return dispatch('user', 'left');
 	}
 }
-
-?>

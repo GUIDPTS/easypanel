@@ -57,5 +57,3 @@ class WhmAPI extends API
 		daocall('vhosttemplete', 'updateNodeTemplete', array($node['name'], $templete));
 	}
 }
-
-?>

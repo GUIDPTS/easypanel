@@ -364,5 +364,3 @@ class DnsControl extends Control
 		whm_return(500);
 	}
 }
-
-?>

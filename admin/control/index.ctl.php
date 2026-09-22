@@ -111,5 +111,3 @@ class IndexControl extends Control
 		$this->display('main.html');
 	}
 }
-
-?>

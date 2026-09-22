@@ -39,5 +39,3 @@ class VhostproductAPI extends API
 	{
 	}
 }
-
-?>

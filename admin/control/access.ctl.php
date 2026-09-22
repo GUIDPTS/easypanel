@@ -250,5 +250,3 @@ class AccessControl extends Control
 		exit();
 	}
 }
-
-?>

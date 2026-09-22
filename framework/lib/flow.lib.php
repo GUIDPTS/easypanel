@@ -214,6 +214,3 @@ class Flow
 		return $this->pdo;
 	}
 }
-
-
-?>

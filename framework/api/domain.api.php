@@ -53,5 +53,3 @@ class DomainAPI extends API
 		return daocall('domains', 'domainUpdate', array($domain, $arr));
 	}
 }
-
-?>

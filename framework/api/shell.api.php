@@ -469,5 +469,3 @@ class ShellAPI extends API
 		return $whm->call($whmCall);
 	}
 }
-
-?>

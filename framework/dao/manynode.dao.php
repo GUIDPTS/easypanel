@@ -58,5 +58,3 @@ class ManynodeDAO extends DAO
 		return $this->selectPage(array('name', 'host', 'port', 'skey', 'mem', 'synctime', 'syncstatus'), $where, $order_field, $desc, $page, $page_count, $count);
 	}
 }
-
-?>

@@ -140,5 +140,3 @@ class SqlsrvDbProduct extends DbProduct
 		return '\'' . str_replace(array('\\', '\''), array('\\\\', '\\\''), ep_str($value)) . '\'';
 	}
 }
-
-?>

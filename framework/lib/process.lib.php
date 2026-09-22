@@ -99,11 +99,42 @@ class Process
 			$command[] = substr($test_args, $i, 1);
 			++$i;
 		}
+		$pipes = array();
+		$stdout = '';
+		$stderr = '';
 		$rs = $this->run(array(array($test_cmd)), null, $pipes, "c:\\a.txt");
 		print_r($pipes);
 		echo "time=" . time() . "\n";
 		$this->handle($rs, $pipes, "test", $stdout, $stderr);
 		echo "time=" . time() . " stdout=" . $stdout . " stderr=" . $stderr . "\n";
+	}
+
+	private function handle($rs, &$pipes, $stdin, &$stdout, &$stderr)
+	{
+		$stdout = '';
+		$stderr = '';
+		if (!is_resource($rs)) {
+			$stderr = 'rs is not resource';
+			return 1;
+		}
+		if ($stdin && isset($pipes[0]) && is_resource($pipes[0])) {
+			if (0 < strlen($stdin)) {
+				fwrite($pipes[0], $stdin);
+			}
+			fclose($pipes[0]);
+		}
+		if (isset($pipes[1]) && is_resource($pipes[1])) {
+			$stdout = stream_get_contents($pipes[1]);
+			fclose($pipes[1]);
+		}
+		if (isset($pipes[2]) && is_resource($pipes[2])) {
+			$stderr = stream_get_contents($pipes[2]);
+			fclose($pipes[2]);
+		}
+		$status = proc_get_status($rs);
+		$code = $status['exitcode'];
+		proc_close($rs);
+		return $code;
 	}
 
 	private function winrun(array $cmds, $vh, &$pipes, $stdin_file = null, $stdout_file = null, $stderr_file = null)

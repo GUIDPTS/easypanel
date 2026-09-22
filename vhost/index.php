@@ -31,5 +31,3 @@ $tpl->assign('main', $main);
 $tpl->assign('width', '960');
 $tpl->assign('title', getTitle());
 $tpl->display('noframe.html');
-
-?>

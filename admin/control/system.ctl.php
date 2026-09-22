@@ -75,5 +75,3 @@ class SystemControl extends Control
 		return false;
 	}
 }
-
-?>

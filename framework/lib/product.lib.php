@@ -158,6 +158,3 @@ abstract class Product
 
 	abstract public function checkParam($username, $suser);
 }
-
-
-?>

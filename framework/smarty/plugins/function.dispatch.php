@@ -9,4 +9,3 @@ function smarty_function_dispatch($params, $template)
     return $str;
 }
 
-?>

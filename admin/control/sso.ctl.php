@@ -53,5 +53,3 @@ class SsoControl extends Control
 		exit('login failed');
 	}
 }
-
-?>

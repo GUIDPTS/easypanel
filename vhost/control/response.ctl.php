@@ -77,5 +77,3 @@ class ResponseControl extends control
 		return $this->_tpl->fetch('msg.html');
 	}
 }
-
-?>

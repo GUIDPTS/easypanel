@@ -716,5 +716,3 @@ class CdnAPI extends API
 		}
 	}
 }
-
-?>
