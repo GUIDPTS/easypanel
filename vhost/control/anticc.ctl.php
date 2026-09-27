@@ -103,9 +103,6 @@ class AnticcControl extends Control
 				'show' => true
 			],
 		];
-		if(!file_exists('/var/run/cdnbest.pid')){
-			unset($mode_list['vcode']);
-		}
 		return $mode_list;
 	}
 
