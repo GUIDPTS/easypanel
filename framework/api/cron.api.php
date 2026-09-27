@@ -227,6 +227,7 @@ class CronAPI extends API
 		$msg = "SHELL=/bin/bash\n";
 		$msg .= "PATH=/sbin:/bin:/usr/sbin:/usr/bin\n";
 		$msg .= "HOME=/\n";
+		$msg .= "MAILTO=\"\"\n";
 		$msg .= '*/' . $cron['step'] . ' * * * * root /vhs/kangle/ext/php56/bin/php -c /vhs/kangle/ext/php56/etc/php-node.ini ' . $cron['cmd'];
 		$msg .= "\n";
 		fwrite($fp, $msg);
