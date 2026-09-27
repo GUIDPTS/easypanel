@@ -127,6 +127,7 @@ class IndexControl extends Control
 			$ssl = 1;
 		}
 		$this->_tpl->assign('ssl', $ssl);
+		$this->_tpl->assign('safelineInstalled', file_exists('/data/safeline/resources/detector/snserver.sock') && file_exists('/vhs/kangle/ext/safeline.dso.xml'));
 		return $this->_tpl->fetch('top.html');
 	}
 
@@ -215,6 +216,7 @@ class IndexControl extends Control
 		}
 
 		$this->_tpl->assign('user', $user);
+		$this->_tpl->assign('safelineInstalled', file_exists('/data/safeline/resources/detector/snserver.sock') && file_exists('/vhs/kangle/ext/safeline.dso.xml'));
 		return $this->_tpl->fetch('kfinfo.html');
 	}
 

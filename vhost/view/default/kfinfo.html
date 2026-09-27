@@ -143,6 +143,7 @@ var msg = '{{$msg}}';
 			<li><a class="csgl" href='?c=antisql&a=antisqlFrom'>参数过滤</a></li>
 			<li><a class="muma" href='?c=antiupload&a=antiuploadFrom'>防木马上传</a></li>
 			<li><a class="cc" href='?c=anticc&a=anticcFrom'>防CC攻击</a></li>
+			{{if $safelineInstalled}}<li><a style="background:url({{$STATIC}}imgs/webwaf.png) no-repeat center top;background-size:52px 52px;display:inline-block;padding-top:48px" href='?c=webwaf&a=webwafFrom'>Web安全防护</a></li>{{/if}}
 		</ul>
     </div>
 	
