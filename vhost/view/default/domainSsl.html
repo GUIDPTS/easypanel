@@ -47,6 +47,18 @@
 			</td>
 		</tr>
 		{{/if}}
+		{{if $ssl==1||$http3==1}}
+		<tr>
+			<td>HTTP3(QUIC):</td>
+			<td>
+				{{if $http3==0}}
+				<a href="javascript:http3_checkon(1)" title='开启'><img src="{{$STATIC}}style/start_on.png" border="0" /></a>
+				{{else}}
+				<a href="javascript:http3_checkon(0)" title='关闭'><img src="{{$STATIC}}style/start_off.png" border="0" /></a>
+				{{/if}}
+			</td>
+		</tr>
+		{{/if}}
 	</table>
 </form>
 </div>
@@ -60,5 +72,10 @@ function http2_checkon(val)
 {
 	var data = 'status=' + val;
 	functoin_checkon('?c=ssl&a=http2',data);
+}
+function http3_checkon(val)
+{
+	var data = 'status=' + val;
+	functoin_checkon('?c=ssl&a=http3',data);
 }
 </script>

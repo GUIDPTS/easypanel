@@ -7,7 +7,7 @@
 - 全解密并升级smarty框架
 - SSL证书可同步到cdn节点
 - SSL配置页面新增"HTTP跳转到HTTPS"选项
-- SSL配置页面新增"开启HTTP2"选项
+- SSL配置页面新增"开启HTTP2"/"开启HTTP3"选项
 - CDN可以给单个域名设置SSL证书
 - 增加独立的PHP版本切换页面
 - EP管理员后台增加选项：默认PHP版本、允许域名泛绑定

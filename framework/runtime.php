@@ -669,7 +669,7 @@ function is_ajax_request() {
 }
 
 error_reporting(E_ERROR | E_PARSE | E_COMPILE_ERROR);
-define('EASYPANEL_VERSION', '2.6.30');
+define('EASYPANEL_VERSION', '2.6.31');
 define('PHP_DEFAULT_VERSION', 'php56');
 define('IIS_DEFAULT_VERSION', 'v2.0.50727');
 define('S_IFDIR', 16384);

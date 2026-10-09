@@ -56,6 +56,7 @@ class SslControl extends Control
 
 		$ssl = apicall('vhost', 'check_ssl', array($vhost));
 		$this->_tpl->assign('ssl', $ssl);
+		$this->_tpl->assign('http3', isset($user['http3']) ? intval($user['http3']) : 0);
 		if($ssl){
 			$this->_tpl->assign('http2', $user['http2']);
 		}
@@ -235,6 +236,7 @@ class SslControl extends Control
 		}
 
 		$this->_tpl->assign('ssl', $ssl);
+		$this->_tpl->assign('http3', isset($user['http3']) ? intval($user['http3']) : 0);
 		if($ssl){
 			$this->_tpl->assign('http2', $user['http2']);
 		}
@@ -385,6 +387,31 @@ class SslControl extends Control
 		}else{
 			exit('失败');
 		}
+	}
+
+	public function http3()
+	{
+		$status = ep_request('status');
+		if ($status !== '0' && $status !== '1') {
+			exit('参数错误');
+		}
+		$vhost = getRole('vhost');
+		$user = daocall('vhost', 'getVhost', array($vhost));
+		if (!$user || ($status === '1' && strpos(ep_str($user['port']), 's') === false)) {
+			exit('您的账号不支持设置SSL证书');
+		}
+		$result = daocall('vhost', 'updateVhost', array($vhost, array('http3' => intval($status))));
+		if (!$result) {
+			exit('失败');
+		}
+		if (!apicall('vhost', 'noticeChange', array('localhost', $vhost))) {
+			// Keep the saved switch consistent with the running configuration.
+			daocall('vhost', 'updateVhost', array($vhost, array('http3' => isset($user['http3']) ? intval($user['http3']) : 0)));
+			apicall('vhost', 'noticeChange', array('localhost', $vhost));
+			exit('配置加载失败，请重试');
+		}
+		notice_cdn_changed();
+		exit('成功');
 	}
 
 	private function check_cert($cert, $key){

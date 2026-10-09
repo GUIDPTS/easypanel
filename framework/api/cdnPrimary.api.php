@@ -11,7 +11,7 @@ class CdnPrimaryAPI extends API
 	private $local_vhs_loaded = false;
 	private $loaded_vhs_info = array();
 	private $acess_dir = '/vhs/kangle/cdn/';
-	static private $sync_vhost_fields = array('name', 'doc_root', 'uid', 'status', 'subdir', 'web_quota', 'log_file', 'access', 'speed_limit', 'max_connect', 'cdn', 'sync_seq', 'ip', 'port', 'certificate', 'certificate_key', 'http2');
+	static private $sync_vhost_fields = array('name', 'doc_root', 'uid', 'status', 'subdir', 'web_quota', 'log_file', 'access', 'speed_limit', 'max_connect', 'cdn', 'sync_seq', 'ip', 'port', 'certificate', 'certificate_key', 'http2', 'http3');
 
 	public function __construct()
 	{
